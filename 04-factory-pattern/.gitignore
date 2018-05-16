@@ -5,6 +5,5 @@
 /.apt_generated/
 /.mvn/
 .factorypath
-desc.txt
 mvnw
 mvnw.cmd
