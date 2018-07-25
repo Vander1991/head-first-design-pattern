@@ -12,5 +12,9 @@
   	<module>03-decorator-pattern</module>
   	<module>04-factory-pattern</module>
   	<module>05-singleton-pattern</module>
+  	<module>06-command-pattern</module>
+  	<module>07-adapter-pattern</module>
+  	<module>08-facade-pattern</module>
+  	<module>09-template-method-pattern</module>
   </modules>
 </project>
