@@ -16,5 +16,6 @@
   	<module>07-adapter-pattern</module>
   	<module>08-facade-pattern</module>
   	<module>09-template-method-pattern</module>
+  	<module>10-Iterator-Pattern</module>
   </modules>
 </project>
