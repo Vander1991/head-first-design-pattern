@@ -20,14 +20,14 @@ public class PizzaMenuIterator implements Iterator<MenuItem> {
 	}
 
 	public boolean hasNext() {
-		if(menuItems.get(position) != null) {
+		if(position < menuItems.size() && menuItems.get(position) != null) {
 			return true;
 		}
 		return false;
 	}
 
 	public MenuItem next() {
-		if(menuItems.get(position) != null) {
+		if(position < menuItems.size() && menuItems.get(position) != null) {
 			MenuItem item = menuItems.get(position);  
 			position++;
 			return item;

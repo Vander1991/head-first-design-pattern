@@ -24,8 +24,9 @@ public class MenuAdmin {
 	
 	public void traverseMenus(Iterator<MenuItem> iterator) {
 		while(iterator.hasNext()) {
-			System.out.println("name:" + iterator.next().getName() + "-desc:" + iterator.next().getDesc()
-					+ "-price:" + iterator.next().getPrice());
+			MenuItem menuItem = iterator.next();
+			System.out.println("name:" + menuItem.getName() + "-desc:" + menuItem.getDesc()
+					+ "-price:" + menuItem.getPrice());
 		}
 	}
 	

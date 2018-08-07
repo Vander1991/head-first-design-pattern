@@ -1,9 +1,5 @@
 package szu.vander.impl2;
 
-import szu.vander.impl1.BarbecueMenu;
-import szu.vander.impl1.MenuAdmin;
-import szu.vander.impl1.PizzaMenu;
-
 /**
 * @author      : Vander Choi
 * @date        : 2018-07-26
@@ -15,7 +11,7 @@ public class Main {
 		BarbecueMenu barbecueMenu = new BarbecueMenu();
 		PizzaMenu pizzaMenu = new PizzaMenu();
 		MenuAdmin menuAdmin = new MenuAdmin(barbecueMenu, pizzaMenu);
-		menuAdmin.displayMenu();
+		menuAdmin.displayMenus();
 	}
 
 }
