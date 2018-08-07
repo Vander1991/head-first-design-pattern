@@ -33,8 +33,8 @@ public class Main {
 		barbecueMenu.add(new MenuItem("fragrant-flowered garlic", "with pepper", 10));
 		barbecueMenu.add(milkTeaMenu);
 
-//		totalMenu.add(hotPotMenu);
-//		totalMenu.add(barbecueMenu);
+		totalMenu.add(hotPotMenu);
+		totalMenu.add(barbecueMenu);
 		totalMenu.add(pizzaMenu);
 		
 		MenuAdmin menuAdmin = new MenuAdmin(totalMenu);
