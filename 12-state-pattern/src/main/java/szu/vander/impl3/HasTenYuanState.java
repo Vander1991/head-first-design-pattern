@@ -1,4 +1,7 @@
-package szu.vander.impl2;
+package szu.vander.impl3;
+
+import java.util.Random;
+
 /**
 * @author      : Vander
 * @date        : 2018-08-08
@@ -23,7 +26,13 @@ public class HasTenYuanState implements State {
 
 	public void pressSellButton() {
 		System.out.println("You press the sell button, give you the judge");
-		autoSeller.setState(autoSeller.getSoldState());
+		Random random = new Random();
+		int randomNum = random.nextInt(1);
+		if(randomNum == 0) {
+			autoSeller.setState(autoSeller.getWinnerState());
+		} else {
+			autoSeller.setState(autoSeller.getSoldState());
+		}
 	}
 
 	public void dispense() {

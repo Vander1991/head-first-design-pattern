@@ -1,4 +1,5 @@
-package szu.vander.impl2;
+package szu.vander.impl3;
+
 /**
 * @author      : Vander
 * @date        : 2018-08-08
@@ -14,6 +15,8 @@ public class AutoSeller {
 	
 	private State soldState;
 	
+	private State winnerState;
+	
 	private int count;
 	
 	private State state = soldOutState;
@@ -25,6 +28,7 @@ public class AutoSeller {
 		this.hasTenYuanState = new HasTenYuanState(this);
 		this.soldOutState = new SoldOutState(this);
 		this.soldState = new SoldState(this);
+		this.winnerState = new WinnerState(this);
 		this.count = count;
 		if(count > 0) {
 			state = noTenYuanState;
@@ -92,6 +96,14 @@ public class AutoSeller {
 
 	public void setSoldState(State soldState) {
 		this.soldState = soldState;
+	}
+
+	public State getWinnerState() {
+		return winnerState;
+	}
+
+	public void setWinnerState(State winnerState) {
+		this.winnerState = winnerState;
 	}
 	
 }

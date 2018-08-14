@@ -71,7 +71,6 @@ public class AutoSeller {
 			System.out.println("System error, No judge dispense");
 		} else if(state == HAS_TEN_YUAN) {
 			System.out.println("System error, No judge dispense");
-			state = SOLD;
 		} else if(state == SOLD) {
 			System.out.println("We're giving the judge");
 			count--;
