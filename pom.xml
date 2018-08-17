@@ -19,5 +19,6 @@
   	<module>10-Iterator-Pattern</module>
   	<module>11-composite-pattern</module>
   	<module>12-state-pattern</module>
+  	<module>13-proxy-pattern</module>
   </modules>
 </project>
