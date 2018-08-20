@@ -5,17 +5,20 @@ import java.awt.Graphics;
 import java.net.URL;
 
 import javax.swing.Icon;
+import javax.swing.ImageIcon;
 
 /**
 * @author      : Vander
 * @date        : 2018-08-20
 * @description ： 
 */
-public class AdvertisingProxy implements Icon{
+public class AdvertisingImageProxy implements Icon{
 
 	private static final int DEFAULT_WIDTH = 500;
+	
+	private static final int DEFAULT_HEIGHT = 1000;
 
-	private AdvertisingIcon icon;
+	private Icon icon;
 	
 	private URL advertisingUrl;
 	
@@ -23,7 +26,7 @@ public class AdvertisingProxy implements Icon{
 	
 	boolean retrieving = false;
 	
-	public AdvertisingProxy(URL url) {
+	public AdvertisingImageProxy(URL url) {
 		advertisingUrl = url;
 	}
 	
@@ -32,13 +35,13 @@ public class AdvertisingProxy implements Icon{
 		if(icon != null) {
 			icon.paintIcon(c, g, x, y);
 		} else {
-			g.drawString("Loading the advertising", x + 200, y + 90);
+			g.drawString("Loading the advertising...", x + 200, y + 90);
 			if(!retrieving) {
 				retrieving = true;
 				retrievalThread = new Thread(new Runnable() {
 					public void run() {
 						try {
-							icon = new AdvertisingIcon(advertisingUrl, "advertising");
+							icon = new ImageIcon(advertisingUrl);
 						} catch(Exception e) {
 							e.printStackTrace();
 						}
@@ -61,9 +64,9 @@ public class AdvertisingProxy implements Icon{
 	@Override
 	public int getIconHeight() {
 		if(icon != null) {
-			return icon.getIconWidth();
+			return icon.getIconHeight();
 		} else {
-			return DEFAULT_WIDTH;
+			return DEFAULT_HEIGHT;
 		}	
 	}
 
