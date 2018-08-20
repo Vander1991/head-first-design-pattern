@@ -9,7 +9,9 @@ import szu.vander.impl2.remote.AutoSeller;
 */
 public class NoTenYuanState implements State {
 
-	private AutoSeller autoSeller;
+	private static final long serialVersionUID = -6870596307059606052L;
+
+	transient AutoSeller autoSeller;
 	
 	public NoTenYuanState(AutoSeller autoSeller) {
 		this.autoSeller = autoSeller;

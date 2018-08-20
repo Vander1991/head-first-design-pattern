@@ -7,7 +7,6 @@ import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.List;
 
-import szu.vander.impl2.remote.AutoSeller;
 import szu.vander.impl2.remote.BaseAutoSellerRemote;
 
 /**
@@ -17,17 +16,17 @@ import szu.vander.impl2.remote.BaseAutoSellerRemote;
 */
 public class Client {
 
-	public static void main(String[] args) {
-		String url = "rmi://localhost/";
+	public static void main(String[] args) throws RemoteException {
+		String url = "rmi://localhost:1099/ShenZhen/coastalcity/autoSeller";
 		BaseAutoSellerRemote autoSeller = null;
 		try {
-			 autoSeller = (BaseAutoSellerRemote) Naming.lookup(url + "autoSeller");
+			 autoSeller = (BaseAutoSellerRemote) Naming.lookup(url);
 		} catch (MalformedURLException | RemoteException | NotBoundException e1) {
 			e1.printStackTrace();
 		}
 		
-		List<AutoSeller> autoSellerList = new ArrayList<AutoSeller>();
-		autoSellerList.add((AutoSeller)autoSeller);
+		List<BaseAutoSellerRemote> autoSellerList = new ArrayList<BaseAutoSellerRemote>();
+		autoSellerList.add(autoSeller);
 		AutoSellerMonitor autoSellerMonitor = new AutoSellerMonitor(autoSellerList);
 		
 		autoSellerMonitor.report();

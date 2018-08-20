@@ -11,6 +11,8 @@ import szu.vander.impl2.remote.AutoSeller;
 */
 public class HasTenYuanState implements State {
 
+	private static final long serialVersionUID = 4995617222812032435L;
+
 	private AutoSeller autoSeller;
 	
 	public HasTenYuanState(AutoSeller autoSeller) {

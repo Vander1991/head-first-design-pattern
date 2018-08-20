@@ -1,8 +1,9 @@
 package szu.vander.impl2;
 
+import java.rmi.RemoteException;
 import java.util.List;
 
-import szu.vander.impl2.remote.AutoSeller;
+import szu.vander.impl2.remote.BaseAutoSellerRemote;
 
 /**
 * @author      : Vander
@@ -11,15 +12,15 @@ import szu.vander.impl2.remote.AutoSeller;
 */
 public class AutoSellerMonitor {
 
-	private List<AutoSeller> autoSellerList;
+	private List<BaseAutoSellerRemote> autoSellerList;
 
-	public AutoSellerMonitor(List<AutoSeller> autoSellerList) {
+	public AutoSellerMonitor(List<BaseAutoSellerRemote> autoSellerList) {
 		super();
 		this.autoSellerList = autoSellerList;
 	}
 
-	public void report() {
-		for(AutoSeller autoSeller : autoSellerList) {
+	public void report() throws RemoteException {
+		for(BaseAutoSellerRemote autoSeller : autoSellerList) {
 			System.out.println("############# Monitor ############");
 			System.out.println("Location ：" + autoSeller.getLocation());
 			System.out.println("State ：" + autoSeller.getState());

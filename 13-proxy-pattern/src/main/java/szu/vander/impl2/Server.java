@@ -18,8 +18,8 @@ public class Server {
 		
 		BaseAutoSellerRemote autoSeller = null;
 		try {
-			autoSeller = new AutoSeller("SZUAutoSeller", 10);
-			Naming.rebind("rmi://localhost:1099/SZUAutoSeller", autoSeller);
+			autoSeller = new AutoSeller("autoSeller", 10);
+			Naming.rebind("rmi://localhost:1099/ShenZhen/coastalcity/autoSeller", autoSeller);
 		} catch (RemoteException | MalformedURLException e) {
 			e.printStackTrace();
 		}

@@ -9,6 +9,8 @@ import szu.vander.impl2.remote.AutoSeller;
 */
 public class SoldOutState implements State {
 
+	private static final long serialVersionUID = -3680075059209054474L;
+	
 	AutoSeller autoSeller;
 	
 	public SoldOutState(AutoSeller autoSeller) {
