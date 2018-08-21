@@ -10,9 +10,9 @@ import java.lang.reflect.Method;
 */
 public class OwnerInvocationHandler implements InvocationHandler {
 
-	private Person person;
+	private BasePerson person;
 	
-	public OwnerInvocationHandler(Person person) {
+	public OwnerInvocationHandler(BasePerson person) {
 		this.person = person;
 	}
 	

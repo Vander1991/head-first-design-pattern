@@ -26,23 +26,23 @@ public class MatchMakingService {
 		personRepository.put("Vincent", new Person("Vincent", "Boy", "Baseball"));
 	}
 	
-	public Person getOwnerProxy(Person person) {
-		return (Person)Proxy.newProxyInstance(
+	public BasePerson getOwnerProxy(BasePerson person) {
+		return (BasePerson)Proxy.newProxyInstance(
 				person.getClass().getClassLoader(), 
 				person.getClass().getInterfaces(), 
 				new OwnerInvocationHandler(person));
 	}
 	
-	public Person getNonOwnerProxy(Person person) {
-		return (Person)Proxy.newProxyInstance(
+	public BasePerson getNonOwnerProxy(BasePerson person) {
+		return (BasePerson)Proxy.newProxyInstance(
 				person.getClass().getClassLoader(), 
 				person.getClass().getInterfaces(), 
 				new NonOwnerInvocationHandler(person));
 	}
 	
 	public void match() {
-		Person vander = getPersonByName("Vander");
-		Person ownerProxy = getOwnerProxy(vander);
+		BasePerson vander = getPersonByName("Vander");
+		BasePerson ownerProxy = getOwnerProxy(vander);
 		System.out.println("Name : " + ownerProxy.getName());
 		ownerProxy.setInterests("bowling");
 		System.out.println("Interests set from owner proxy");
@@ -52,7 +52,7 @@ public class MatchMakingService {
 			System.err.println("Can not set rating from owner proxy");
 		}
 		
-		Person nonOwnerProxy = getNonOwnerProxy(vander);
+		BasePerson nonOwnerProxy = getNonOwnerProxy(vander);
 		System.out.println("Name : " + nonOwnerProxy.getName());
 		
 		try {

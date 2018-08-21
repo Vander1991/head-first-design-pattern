@@ -4,7 +4,7 @@ package szu.vander.impl4;
 * @date        : 2018-08-21
 * @description ： 
 */
-public class Person {
+public class Person implements BasePerson {
 
 	private String name;
 	
