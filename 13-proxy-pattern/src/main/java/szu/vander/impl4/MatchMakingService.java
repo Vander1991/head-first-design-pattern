@@ -49,7 +49,7 @@ public class MatchMakingService {
 		try {
 			ownerProxy.setHotOrNotRating(10);
 		} catch(Exception e) {
-			System.err.println("Can not set rating from owner proxy");
+			System.out.println("Can not set rating from owner proxy");
 		}
 		
 		BasePerson nonOwnerProxy = getNonOwnerProxy(vander);
@@ -58,7 +58,7 @@ public class MatchMakingService {
 		try {
 			nonOwnerProxy.setInterests("badminton");
 		} catch(Exception e) {
-			System.err.println("Cannot set interests from non ownner proxy");
+			System.out.println("Cannot set interests from non ownner proxy");
 		}
 		nonOwnerProxy.setHotOrNotRating(2);
 		System.out.println("Rating set from non owner proxy");

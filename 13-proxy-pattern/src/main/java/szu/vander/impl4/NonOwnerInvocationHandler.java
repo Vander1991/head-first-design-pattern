@@ -19,11 +19,11 @@ public class NonOwnerInvocationHandler implements InvocationHandler {
 	@Override
 	public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
 		if(method.getName().equals("setHotOrNotRating")) {
-			method.invoke(person, args);
+			return method.invoke(person, args);
 		} else if(method.getName().startsWith("set")) {
 			throw new IllegalAccessException();
 		} else if(method.getName().startsWith("get")) {
-			method.invoke(person, args);
+			return method.invoke(person, args);
 		}
 		return null;
 	}
