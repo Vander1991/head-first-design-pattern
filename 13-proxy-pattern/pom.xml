@@ -9,6 +9,14 @@
   <name>13-proxy-pattern</name>
   <description>13-proxy-pattern</description>
   
+  <dependencies>
+	<dependency>
+	    <groupId>cglib</groupId>
+	    <artifactId>cglib</artifactId>
+	    <version>2.2.2</version>
+	</dependency>
+  </dependencies>
+  
   <build>
   	<plugins>
   		<plugin>
