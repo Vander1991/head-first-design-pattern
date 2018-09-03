@@ -20,5 +20,6 @@
   	<module>11-composite-pattern</module>
   	<module>12-state-pattern</module>
   	<module>13-proxy-pattern</module>
+  	<module>14-composite-pattern</module>
   </modules>
 </project>
