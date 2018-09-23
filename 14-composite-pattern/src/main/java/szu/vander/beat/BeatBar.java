@@ -1,4 +1,4 @@
-package szu.vander.mvc;
+package szu.vander.beat;
 
 import javax.swing.JProgressBar;
 

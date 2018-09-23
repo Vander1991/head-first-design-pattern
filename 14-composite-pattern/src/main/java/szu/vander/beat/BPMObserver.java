@@ -1,11 +1,11 @@
-package szu.vander.mvc;
+package szu.vander.beat;
 /**
 * @author : Vander Choi
 * @date : 2018-09-16
 * @description :
 */
-public interface BeatObserver {
+public interface BPMObserver {
 
-	void updateBeat();
+	void updateBPM();
 	
 }

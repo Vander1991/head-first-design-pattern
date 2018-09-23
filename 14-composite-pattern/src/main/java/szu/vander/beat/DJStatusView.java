@@ -1,4 +1,4 @@
-package szu.vander.mvc;
+package szu.vander.beat;
 
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
