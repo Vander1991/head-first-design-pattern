@@ -38,7 +38,7 @@ public class MatchMakingService {
 	public Object getNonOwnerProxy(Object obj){
         Enhancer enhancer = new Enhancer();
         enhancer.setSuperclass(obj.getClass());
-        enhancer.setCallback(new OwnerProxy());
+        enhancer.setCallback(new NonOwnerProxy());
         return enhancer.create();
     }
 	
